@@ -1,0 +1,6 @@
+aiofiles==0.6.0
+fastapi==0.64.0
+Jinja2==2.11.3
+pytest==6.2.4
+requests==2.25.1
+uvicorn==0.13.4

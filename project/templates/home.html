@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<div class="starter-template">
+  <h1>FastAPI + Celery + Docker</h1>
+  <hr><br>
+  <div>
+    <h3>Tasks</h3>
+    <p>Pick a task length.</p>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary" onclick="handleClick(1)">Short</a>
+      <button type="button" class="btn btn-primary" onclick="handleClick(2)">Medium</a>
+      <button type="button" class="btn btn-primary" onclick="handleClick(3)">Long</a>
+    </div>
+  </div>
+  <br><br>
+  <div>
+    <h3>Task Status</h3>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody id="tasks">
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}
