@@ -2,7 +2,7 @@ aiofiles==0.6.0
 celery==4.4.7
 fastapi==0.64.0
 flower==0.9.7
-Jinja2==2.11.3
+Jinja2==3.0.3
 pytest==6.2.4
 redis==3.5.3
 requests==2.25.1
