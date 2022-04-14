@@ -1,10 +1,9 @@
-from celery.result import AsyncResult
 from fastapi import Body, FastAPI, Form, Request
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from worker import create_task
+from worker import create_task, celery
 
 
 app = FastAPI()
@@ -27,7 +26,7 @@ def run_task(payload = Body(...)):
 
 @app.get("/tasks/{task_id}")
 def get_status(task_id):
-    task_result = AsyncResult(task_id)
+    task_result = celery.AsyncResult(task_id)
     result = {
         "task_id": task_id,
         "task_status": task_result.status,
