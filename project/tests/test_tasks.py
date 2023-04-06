@@ -1,6 +1,5 @@
 import json
-
-from unittest.mock import patch, call
+from unittest.mock import patch
 
 from worker import create_task
 
